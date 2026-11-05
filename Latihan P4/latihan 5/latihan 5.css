@@ -1,0 +1,149 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #e6e6fa, #dbeafe);
+    color: #51445f;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(120, 90, 140, 0.15);
+}
+
+h1 {
+    margin: 0 0 10px;
+    text-align: center;
+    color: #b65c87;
+    font-size: 30px;
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    text-align: center;
+    color: #8d7a99;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Input tugas */
+#task-input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e5c9df;
+    border-radius: 12px;
+    outline: none;
+    background: #fffaff;
+    font-size: 14px;
+}
+
+#task-input:focus {
+    border-color: #c77dba;
+    box-shadow: 0 0 8px rgba(199, 125, 186, 0.2);
+}
+
+/* Tombol tambah */
+#add-task {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #d98bb8, #a995d5);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-task:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* Daftar tugas */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 22px;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 12px;
+    border: 1px solid #f0ddeb;
+    border-radius: 12px;
+    background: #fff8fc;
+    overflow-wrap: anywhere;
+}
+
+#task-list li input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    accent-color: #c77dba;
+    cursor: pointer;
+}
+
+#task-list li span {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Tombol hapus */
+#task-list li button {
+    padding: 7px 10px;
+    border: none;
+    border-radius: 8px;
+    background: #f4c6d7;
+    color: #8b365b;
+    font-size: 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#task-list li button:hover {
+    background: #eea9c4;
+}
+
+/* Tulisan bawah */
+.footer {
+    margin: 25px 0 0;
+    text-align: center;
+    color: #a995b5;
+    font-size: 12px;
+}
+
+/* Tampilan HP */
+@media (max-width: 480px) {
+    .container {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    #task-list li {
+        gap: 7px;
+        padding: 10px;
+    }
+}
